@@ -1,0 +1,252 @@
+/* --- 1. VARIABLES & THEME (Permanent Dark Mode) --- */
+:root {
+    --primary: #d4af37;        /* Gold */
+    --bg-body: #0f0f0f;        /* Deep Black */
+    --bg-card: #1a1a1a;        /* Card Dark */
+    --bg-header: rgba(15, 15, 15, 0.95);
+    --text-main: #f0f0f0;      
+    --text-muted: #a0a0a0;     
+    --border: rgba(255, 255, 255, 0.1);
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --whatsapp-green: #25D366;
+    --gmail-red: #EA4335;
+    --phone-blue: #3498db;     /* Custom Blue for Phone */
+}
+
+/* --- 2. GLOBAL RESET --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { 
+    scroll-behavior: smooth; 
+    scroll-padding-top: 80px; 
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden; 
+}
+
+a { text-decoration: none; color: inherit; transition: var(--transition); }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
+iframe { display: block; width: 100%; height: 100%; border: none; }
+
+/* --- 3. NAVIGATION --- */
+header {
+    position: fixed; top: 0; width: 100%;
+    background: var(--bg-header); backdrop-filter: blur(10px); z-index: 3000;
+    padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid var(--border); transition: background 0.3s;
+}
+
+.logo { font-size: 1.5rem; font-family: var(--font-heading); color: var(--primary); font-weight: 700; cursor: pointer; }
+nav { display: flex; align-items: center; gap: 1.5rem; }
+nav ul { display: flex; gap: 1.5rem; align-items: center; }
+nav a { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main); font-weight: 700; }
+nav a:hover { color: var(--primary); }
+.home-btn { background: rgba(212, 175, 55, 0.1); padding: 6px 15px; border-radius: 4px; }
+.icon-btn { cursor: pointer; font-size: 1.2rem; color: var(--text-main); transition: var(--transition); }
+.mobile-toggle { display: none; }
+
+/* --- 4. FLOATING BUTTONS --- */
+
+/* Left Group (WhatsApp Only) */
+.floating-whatsapp {
+    position: fixed; bottom: 30px; left: 30px;
+    width: 60px; height: 60px; background: var(--whatsapp-green);
+    color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center;
+    font-size: 2rem; z-index: 3000; animation: pulse-green 2s infinite;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.3s ease;
+}
+
+/* Right Group (Phone & Home) - Stacked */
+.floating-home {
+    position: fixed; bottom: 30px; right: 30px;
+    width: 50px; height: 50px; background: var(--primary); color: #000;
+    border-radius: 50%; display: flex; justify-content: center; align-items: center;
+    z-index: 2500; opacity: 0; visibility: hidden; transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); font-size: 1.2rem;
+}
+
+.floating-phone {
+    position: fixed; bottom: 95px; right: 30px; /* Stacked above home */
+    width: 50px; height: 50px; background: var(--phone-blue);
+    color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center;
+    font-size: 1.4rem; z-index: 2500; opacity: 0; visibility: hidden; 
+    transition: var(--transition); box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.floating-home.show, .floating-phone.show { opacity: 1; visibility: visible; }
+.floating-whatsapp:hover, .floating-phone:hover, .floating-home:hover { transform: scale(1.1); }
+
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* --- 5. HERO SECTION --- */
+.hero { position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 5%; color: #fff; }
+.video-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; object-fit: cover; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)); z-index: -1; }
+.hero h1 { font-size: clamp(2.5rem, 8vw, 5.5rem); color: var(--primary); margin-bottom: 1rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+.hero p { font-size: clamp(1rem, 3vw, 1.4rem); max-width: 600px; margin-bottom: 2rem; }
+
+/* --- 6. CONTENT SECTIONS --- */
+section { padding: 100px 10% 60px; }
+.section-title { font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 4rem; font-family: var(--font-heading); position: relative; }
+.section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--primary); margin: 15px auto 0; }
+
+/* About & Headings */
+.about-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.about-image img { width: 100%; border-radius: 4px; box-shadow: 15px 15px 0px var(--primary); }
+.about-content h3 { color: var(--primary); font-family: var(--font-heading); font-size: 1.4rem; margin-top: 1.6rem; margin-bottom: 0.8rem; font-weight: 700; letter-spacing: 0.5px; }
+
+/* Resume Buttons */
+.resume-actions { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 25px; border-radius: 50px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; transition: var(--transition); border: 2px solid var(--primary); }
+.btn-primary { background: var(--primary); color: #000; }
+.btn-primary:hover { background: transparent; color: var(--primary); transform: translateY(-3px); }
+.btn-outline { background: transparent; color: var(--primary); }
+.btn-outline:hover { background: rgba(212, 175, 55, 0.1); color: #fff; transform: translateY(-3px); }
+
+/* Education */
+.guru-container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: center; margin-bottom: 4rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+.guru-image img { border-radius: 50% 50% 4px 4px; border: 3px solid var(--primary); }
+.guru-content h3 { font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem; }
+.talim-details i { color: var(--primary); width: 25px; }
+
+.edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+.edu-card { background: var(--bg-card); padding: 30px 20px; border-radius: 8px; border: 1px solid var(--border); text-align: center; transition: var(--transition); }
+.edu-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.edu-icon { font-size: 2rem; color: var(--primary); margin-bottom: 1rem; }
+.edu-card h4 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-main); }
+.edu-card .institution { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
+.edu-card .year { color: var(--primary); font-weight: 700; font-size: 0.8rem; }
+
+/* --- UPDATED CONCERTS SECTION STYLES --- */
+.concert-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2rem; 
+    align-items: start; /* Prevents short cards from stretching vertically */
+}
+.concert-card { 
+    background: var(--bg-card); 
+    border-radius: 8px; 
+    border: 1px solid var(--border); 
+    padding: 25px; 
+    transition: var(--transition); 
+    position: relative; 
+    overflow: hidden; 
+}
+.concert-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--primary); }
+.concert-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-color: var(--primary); }
+
+.city-name { 
+    font-family: var(--font-heading); 
+    font-size: 1.4rem; 
+    color: var(--primary); 
+    margin-bottom: 15px; 
+    border-bottom: 1px solid var(--border); 
+    padding-bottom: 10px; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+
+/* Scrollable list for uniform cards */
+.concert-list { 
+    list-style: none; 
+    max-height: 320px; 
+    overflow-y: auto; 
+    padding-right: 10px; 
+}
+.concert-list::-webkit-scrollbar { width: 4px; }
+.concert-list::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 4px; }
+.concert-list::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+
+.concert-list li { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed rgba(255,255,255,0.1); }
+.concert-list li:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+
+.concert-event { font-weight: 700; color: var(--text-main); font-size: 1.05rem; margin-bottom: 8px; line-height: 1.4; }
+.concert-venue { color: var(--text-muted); font-size: 0.85rem; display: flex; align-items: flex-start; gap: 8px; margin-bottom: 5px; line-height: 1.4;}
+.concert-venue i { margin-top: 3px; color: var(--primary); }
+.concert-date { color: var(--primary); font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-top: 8px;}
+
+/* AWARDS SECTION STYLES */
+.award-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+.award-card { background: var(--bg-card); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); transition: var(--transition); text-align: center; }
+.award-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+.award-img-box { width: 100%; height: 220px; overflow: hidden; background: #222; }
+.award-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.award-card:hover .award-img-box img { transform: scale(1.1); }
+.award-info { padding: 20px; }
+.award-info h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 10px; font-family: var(--font-heading); }
+.award-info p { color: var(--text-muted); font-size: 0.9rem; }
+
+/* Music Player */
+.music-grid { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+.track-card { background: var(--bg-card); padding: 25px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; border-left: 3px solid transparent; transition: 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.track-card:hover { border-left-color: var(--primary); transform: translateX(5px); }
+.play-btn { font-size: 2.2rem; color: var(--primary); cursor: pointer; transition: transform 0.2s ease; }
+.play-btn:hover { transform: scale(1.1); }
+
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+.gallery-item { aspect-ratio: 1/1; overflow: hidden; border-radius: 8px; background: #000; position: relative; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+.gallery-item:hover img { transform: scale(1.1); }
+
+/* --- 7. FOOTER & EMAIL CAPSULE --- */
+footer { background: #080808; padding: 80px 5% 30px; text-align: center; border-top: 1px solid #222; }
+
+.email-capsule {
+    display: inline-flex; align-items: center; background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border); border-radius: 50px; padding: 5px 20px;
+    margin: 15px auto; gap: 15px; transition: 0.3s;
+}
+.email-capsule:hover { border-color: var(--primary); background: rgba(212, 175, 55, 0.1); }
+
+/* The Actual Mailto Link */
+.email-link { color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1rem; }
+.email-link i { font-size: 1.3rem; color: var(--primary); }
+
+.copy-btn { 
+    background: transparent; border: none; color: var(--text-muted); 
+    cursor: pointer; transition: 0.3s; font-size: 1.1rem; padding: 5px;
+    border-left: 1px solid var(--border); padding-left: 15px;
+}
+.copy-btn:hover { color: var(--primary); }
+
+/* Footer Icon Colors */
+.fa-phone-footer { color: var(--phone-blue); margin-right: 8px; font-size: 1.2rem; }
+.gmail-icon:hover { color: var(--gmail-red) !important; }
+
+#copy-msg { display: none; color: var(--whatsapp-green); font-size: 0.8rem; margin-left: 5px; animation: fadeIn 0.3s;}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.social-icons { display: flex; justify-content: center; gap: 25px; margin-top: 30px; }
+.social-icons a { font-size: 1.8rem; color: #555; transition: 0.3s; }
+.social-icons a:hover { color: var(--primary); transform: translateY(-5px); }
+
+@media (max-width: 900px) {
+    .mobile-toggle { display: block; }
+    nav ul { position: fixed; top: 70px; right: -100%; flex-direction: column; background: var(--bg-header); width: 100%; height: 100vh; padding: 40px 0; transition: 0.4s; border-top: 1px solid var(--border); }
+    nav ul.active { right: 0; }
+    .about-container, .guru-container { grid-template-columns: 1fr; text-align: center; }
+    .guru-image { max-width: 400px; margin: 0 auto; }
+    .floating-whatsapp { left: 20px; bottom: 20px; width: 50px; height: 50px; font-size: 1.5rem; }
+    .floating-home { right: 20px; bottom: 20px; }
+    .floating-phone { right: 20px; bottom: 85px; }
+    .email-capsule { flex-direction: column; border-radius: 15px; padding: 15px; }
+    .copy-btn { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 10px; width: 100%; }
+    .resume-actions { justify-content: center; }
+}

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Pankaj Sharma</title>
+    <link rel="icon" href="assest\icon.png" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="home-top">
+
+    <header>
+        <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <i class="fa-solid"></i> Dr. Pankaj Sharma
+        </div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#home-top" class="home-btn">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#guruintro">Guru Intro</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#gallery">Music Gallery</a></li>
+                <li><a href="#concerts">Concerts</a></li>
+                <li><a href="#Award">Award</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="icon-btn mobile-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars" id="menu-icon"></i></div>
+        </nav>
+    </header>
+
+    <a href="https://wa.me/917505044116?text=Namaste!%20Dr.%20Pankaj%20Sharma." target="_blank" class="floating-whatsapp" title="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="tel:+917505044116" class="floating-phone" id="floatingPhone" title="Call Now">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <a href="#home-top" class="floating-home" id="floatingHome" title="Top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+    <section class="hero">
+        <video class="video-bg" autoplay muted loop playsinline poster="assest\v.mkv">
+            <source src="assest\v.mkv" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <h1>संगीत के स्वर : आनंद से मोक्ष तक......</h1>
+        <p>जहाँ हर क्षण एक नई अनुभूति है.....</p>
+        <br>
+        <a href="#music" style="padding: 14px 35px; border: 1px solid var(--primary); color: var(--primary); text-transform: uppercase; font-weight: bold; background: rgba(0,0,0,0.3);">Start Listening</a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">The Artist</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="assest/IMG 2.avif" alt="Artist Portrait">
+            </div>
+            <div class="about-content">
+                <h3>Dr. Pankaj Sharma: A Distinguished Classical Musician</h3>
+                <p>Dr. Pankaj Sharma is a young and exceptionally talented artist of North Indian classical music. Born in Sujangarh, Rajasthan, he received his initial musical training under the guidance of eminent artists Sri Praveen Sharma, Sri Kamal Sharma, and the late Sri Shubhkaran Panwar of Sujangarh. Subsequently, he pursued formal training in classical music within the traditional guru-shishya (teacher-student) parampara under the tutelage of Dr. Ramgopal Tripathi of Varanasi.</p>
+                <p>After completing his secondary education in Rajasthan, Pankaj pursued higher studies at Banaras Hindu University (BHU), Varanasi. Under the guidance of distinguished faculty members from the Department of Music and Performing Arts at BHU, he successfully completed all levels of advanced classical music education. Currently, he continues his advanced training in classical music under the mentorship of Dr. Ramshankar, a principal disciple of the renowned Pandit Ramashraya Jha of the "Ramrang" tradition.</p>
+
+                <h3>Professional Passion</h3>
+                <p>Pankaj Sharma has delivered successful performances on numerous prestigious platforms across the country and has contributed his expertise as a music educator in several leading academic institutions. He is currently serving as a music teacher at Mahatma Gandhi Kashi Vidyapith, Varanasi.</p>
+
+                <h3>Musical Excellence</h3>
+                <p>He is widely recognized for his soulful performances and refined teaching methodology. Rooted deeply in Hindustani classical music, he has carved a distinctive path through years of dedicated practice, passion, and heartfelt artistic expression.</p>
+                <p>His musical repertoire encompasses Khayal singing, devotional music, and semi-classical forms, demonstrating both remarkable versatility and profound depth. With a voice that conveys clarity, emotional depth, and technical control, Pankaj's performances resonate with sincerity and spiritual grace, captivating audiences with his authentic interpretation of the classical tradition.</p>
+
+                <h3>Lineage & Training</h3>
+                <p>Dr. Sharma has received education from two esteemed music gurus of Varanasi, Dr. Ramgopal Tripathi and Dr. Ramshankar. Currently, he is actively engaged in advancing the North Indian classical music tradition through stage performances and training.</p>
+
+                
+                <div class="resume-actions">
+                    <a href="assest\Dr_Pankaj_Sharma_Resume.pdf" target="_blank" class="btn btn-primary" title="Open PDF in new tab">
+                        <i class="fa-solid fa-eye"></i> View Resume
+                    </a>
+                    <a href="assest\Dr_Pankaj_Sharma_Resume.pdf" download class="btn btn-outline" title="Download PDF to device">
+                        <i class="fa-solid fa-download"></i> Download CV
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        
+        <h3 style="text-align: center; margin-bottom: 2rem; color: var(--text-muted);">Formal Qualifications</h3>
+        <div class="edu-grid">
+
+            <div class="edu-card">
+                <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h4>Ph.D</h4>
+                <p class="institution">Banaras Hindu University (BHU)</p>
+                <p class="year">2021</p>
+            </div>
+            <div class="edu-card">
+                <div class="edu-icon"><i class="fa-solid fa-scroll"></i></div>
+                <h4>UGC-NET</h4>
+                <p class="institution">University Grants Commission (UGC)</p>
+                <p class="year">Qualified at Dec 2015</p>
+            </div>
+            <div class="edu-card">
+                <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h4>M.Mus (Master of Music)</h4>
+                <p class="institution">Faculty of Performing Arts, BHU</p>
+                <p class="year">2013</p>
+            </div>
+            <div class="edu-card">
+                <div class="edu-icon"><i class="fa-solid fa-award"></i></div>
+                <h4>B.Mus (Bachelor of Music)</h4>
+                <p class="institution">Faculty of Performing Arts, BHU</p>
+                <p class="year">2011</p>
+            </div>
+            <div class="edu-card">
+                <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h4>Senior Secondary</h4>
+                <p class="institution">Board of Secondary Education, Rajasthan</p>
+                <p class="year">2007</p>
+            </div>
+            <div class="edu-card">
+                <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h4>High School</h4>
+                <p class="institution">Board of Secondary Education, Rajasthan</p>
+                <p class="year">2005</p>
+            </div>               
+        </div>
+    </section>
+
+    <section id="guruintro">
+        <h2 class="section-title">Guru Intro</h2>
+        
+        <div class="guru-container">
+            <div class="guru-image">
+                <img src="assest\guru\guruji 1.avif" alt="Dr. Ramgopal Tripathi">
+            </div>
+            <div class="guru-content">
+                <h3>Dr. Ramgopal Tripathi: A Confluence of Musical Devotion and Scholarly Excellence</h3>
+                <p>Dr. Ramgopal Tripathi is an illustrious name in the realm of Hindustani Classical and Semi-Classical music—an artist who has established a profound harmony between traditional rendition and academic research. As a torchbearer of the invaluable heritage of the Gwalior Gharana, he has imbibed the intricate nuances of music at the feet of his Guru, Pt. Ravindranath Pandey.</p>
+                <p>Through this sacred Guru–Shishya Parampara, Dr. Tripathi’s life and work are spiritually and artistically linked to the luminous legacy of the great musical saint, Pandit Omkarnath Thakur Ji. His singing is not merely a performance of notes but a reflection of years of penance (Sadhna) and uncompromising shastric purity.</p>
+                <h3>Academic Research & Scholarly Contribution</h3>
+                <p>Dr. Tripathi did not confine music to the stage alone; he provided it with a scientific and educational perspective. His most significant academic contribution remains his pioneering research:</p>
+                <ul style="list-style-type: square;">
+                    <li>Doctoral Research on Mirjapuri Kajri: In 1997, Dr. Tripathi completed his Ph.D. from the Banaras Hindu University (BHU) on the distinctive folk-classical genre of "Mirjapuri Kajri.</li>
+                    <li>Mentorship: He earned this prestigious doctorate under the expert and scholarly guidance of Prof. R. P. Shastri (Former Dean/HOD, Department of Vocal, Faculty of Performing Arts, BHU).</li>
+                    <li>Legacy Preservation: By elevating this rare folk style to a classical academic platform, he has added a new chapter to the preservation of Indian musical heritage.</li>
+                </ul>
+                <h3>Professional Excellence & Global Mentorship</h3>
+                <p>Dr. Tripathi’s contribution to the propagation and promotion of music has been multi-dimensional:</p>
+                <ul style="list-style-type: square;">
+                    <li>Service in KVS: His role as a Music Teacher within the Kendriya Vidyalaya Sangathan (KVS), under the Government of India, has been deeply impactful. He has mentored countless young talents, equipping them with the foundational knowledge of Indian music.</li>
+                    <li>International Pedagogy: The light of his knowledge is not restricted to India; he has provided formal training in Hindustani Classical music to numerous students across the globe. His disciples now carry the banner of the Gwalior Gharana style in various corners of the world.</li>
+                    <li>Academic Leadership: His persona represents a rare and ideal synthesis of traditional Guru-based training (Gurukul Parampara) and systematic academic research.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="guru-container">
+            <div class="guru-image">
+                <img src="assest\guru\guru 2.avif" alt="Dr. Ramshankar">
+            </div>
+            <div class="guru-content">
+                <h3>Dr. Ramshankar: A Global Luminary of Indian Classical Music & the Ramrang Tradition</h3>
+                <p>Dr. Ramshankar is an internationally acclaimed vocalist and a premier exponent of Hindustani Classical Music. He received his rigorous musical training under the tutelage of the legendary scholar and composer, Pandit Ramashray Jha “Ramrang”.</p>
+                <p>He is widely recognized for his profound mastery of Raga Theory and his sophisticated command over complex vocal structures. As a dedicated practitioner and visionary scholar, Dr. Ramshankar has established a unique identity as the principal torchbearer of the "Ramrang Tradition." Currently, he serves as an Acharya (Professor) at the prestigious Banaras Hindu University (BHU).</p>
+                <h3>Professional Excellence & Global Mentorship</h3>
+                <p>Global Mission: The "Ramrang Sangeet Ramayan"</p>
+                <ul style="list-style-type: square;">
+                    <li>Global Institutionalization: He is profoundly committed to systematizing and performing the "Ramrang Sangeet Ramayan"—a masterpiece composed by Pt. Ramashray Jha—within the rigorous framework of Indian Classical Music.</li>
+                    <li>International Recognition: Through his relentless efforts, he has established these compositions on international platforms, ensuring they are recognized as a vital part of the global classical repertoire.</li>
+                </ul>
+                <h3>Academic Research & Scholarly Excellence</h3>
+                <p>Beyond his prowess on the stage, Dr. Ramshankar has significantly enriched the field of musicology through extensive academic contributions:</p>
+                <ul style="list-style-type: square;">
+                    <li>Published Works: He has authored numerous books, research chapters, and scholarly papers that serve as essential resources for students and researchers of Indian music worldwide.</li>
+                    <li>Lectures & Workshops: He is a prominent figure in the global academic circuit, frequently conducting Lecture-Demonstrations (Lec-Dems), Workshops, and Seminars to propagate the nuances of Raga Vidya.</li>
+                    <li>Global Mentorship: He has mentored a vast community of students across India and abroad, fostering a new generation of artists who uphold the purity of the Ramrang lineage.</li>
+                </ul>
+                <h3>Global Outreach & Cultural Propagation</h3>
+                <p>Dr. Ramshankar’s musical journey transcends borders, positioning him as a global cultural ambassador of India:</p>
+                <ul style="list-style-type: square;">
+                    <li>International Concerts: Through his soulful and technically brilliant performances in various countries, he has played a pivotal role in the worldwide propagation of Hindustani Classical Music.</li>
+                    <li>A Synthesis of Traditions: His work represents a rare and seamless integration of traditional Gurukul-based learning and modern university-level musical education.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="music" style="background: var(--bg-card);">
+        <h2 class="section-title">Music</h2>
+        <div class="music-grid">
+            <div class="track-card">
+                <div>
+                    <h4>Raag Vihag</h4>
+                </div>
+                <audio id="audio1" src="assest/music audio/audio 1.aac"></audio>
+                <i class="fa-solid fa-circle-play play-btn" data-target="audio1"></i>
+            </div>
+
+            <div class="track-card">
+                <div>
+                    <h4>Raag Rageshree</h4>
+                </div>
+                <audio id="audio2" src="assest\music audio\audio 2.aac"></audio>
+                <i class="fa-solid fa-circle-play play-btn" data-target="audio2"></i>
+            </div>
+
+            <div class="track-card">
+                <div>
+                    <h4>Raag Mishra Pilu</h4>
+                </div>
+                <audio id="audio3" src="assest\music audio\audio 3.aac"></audio>
+                <i class="fa-solid fa-circle-play play-btn" data-target="audio3"></i>
+            </div>
+    </section>
+
+    <section id="gallery">
+        <h2 class="section-title">Music Gallery</h2>
+        <div class="gallery-grid">
+            
+            <div class="gallery-item">
+                <iframe src="https://www.youtube.com/embed/Gt1zrS_oE0o" allowfullscreen title="Hamri Atariya Pe Aao"></iframe>
+            </div>
+
+            <div class="gallery-item">
+                <iframe src="https://www.youtube.com/embed/0nDEtmSl0p8" allowfullscreen title="Ghazal Performance"></iframe>
+            </div>
+
+            <div class="gallery-item"><img src="assest\music gallery\img.avif" alt="Gallery 3"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (15).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (21).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (13).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (1).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (3).avif" alt="Gallery 3"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (4).avif" alt="Gallery 4"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (5).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (6).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (7).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (8).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (9).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (10).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (11).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (12).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (16).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (14).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (2).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (17).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (18).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (19).avif" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="assest\music gallery\img (20).avif" alt="Gallery 5"></div>
+        </div>
+    </section>
+
+    <section id="concerts" style="background: var(--bg-card);">
+        <h2 class="section-title">Concerts & Performances</h2>
+        <div class="concert-grid">
+            
+            <div class="concert-card">
+                <h3 class="city-name"><i class="fa-solid fa-location-dot"></i> Varanasi</h3>
+                <ul class="concert-list">
+                    <li>
+                        <div class="concert-event">B.H.U. DURGA PUJA</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> BHU </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i>2022</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">KASHI AANAND BY DAINIK JAAGARN, RAJENDRA PRASAAD GHAAT, VARANASI </div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> RAJENDRA PRASAAD GHAAT, Varanasi</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2017</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">SUBAH-E-BANARAS</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> Assi Ghat </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> SEPTEMBER, 2023</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">POORVACHARYA SMRITI SANGEET SAMAROH</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> B.H.U VARANASI  </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> JANUARY, 2017</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">KASHI HINDU VISHWAVIDYALAY SHATABDI VARSH SAMAROH</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i>VARANASI</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> Feb, 2016</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">KASHI AANAND BY DAINIK JAAGARN</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> RAJENDRA PRASAAD GHAAT, VARANASI  </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i>2018</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">JILA SANSKRITIK SAMITI, JILA PRASHASHAN</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> VARANASI </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> JULY, 2015</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Ganga Yatra: Ministry of Culture</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i>VARANASI</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i>March, 2023</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Khelo India : Ministry of Culture</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i>VARANASI</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> May, 2023</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Shikshak diwas : Banaras Hindu University</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> B.H.U VARANASI  </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> September, 2019</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Lal Bahadur Shastri Jayanti</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> Ramnagar, VARANASI  </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> October, 2021</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Shree bhome Math, Jayanti Samaroh</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> VARANASI  </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2026 </div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Mahashivratri Mahotsav </div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> Manimanir Dharmsangh, VARANASI  </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2023 </div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Ramrang Masik sangeet Sabha</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i>VARANASI</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2016 </div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Kashi Tamil Sangmam,  Ministry of Culture</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> VARANASI  </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i>December, 2022</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Shree kushmanda sangeet Mahotsav</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> Dharmsangh, VARANASI  </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> November, 2022</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Raag paraag : Navratri Mahotsav</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i>VARANASI</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i>October, 2022</div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Rashtriya YUwa Sangeet Sammelan - Ek Bhaarat Shresht Bharat</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i>Online</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i>September, 2022</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="concert-card">
+                <h3 class="city-name"><i class="fa-solid fa-location-dot"></i> PRAYAAGRAJ </h3>
+                <ul class="concert-list">
+                    <li>
+                        <div class="concert-event">MAHAKUMBH</div>
+                        <div class="concert-venue"><i class="fa-solid fa-microphone-lines"></i>PRAYAAGRAJ</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2005 </div>
+                    </li>
+                    <li>
+                        <div class="concert-event">SWAR ARPAN SANGEET SAMAROH PRAYAGRAJ ORG. BY PT. PRABHUDATT, MUMBAI </div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2022</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="concert-card">
+                <h3 class="city-name"><i class="fa-solid fa-location-dot"></i> Rajasthan</h3>
+                <ul class="concert-list">
+                    <li>
+                        <div class="concert-event">Khachariyavaas sangeet samaroh Losal</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i>Sikar</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2007 </div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Murailal smriti sangeet samaroh</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i> Bikaner</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2006 </div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Dipotsav, tharda dhaam</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i>Sujangarh</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2005 </div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Darsak sanstha</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i>Jaipur</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2004-05 </div>
+                    </li>
+                    <li>
+                        <div class="concert-event">Shivrati Sangeet Samaoroh</div>
+                        <div class="concert-venue"><i class="fa-solid fa-building"></i>Churu</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2008 </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="concert-card">
+                <h3 class="city-name"><i class="fa-solid fa-location-dot"></i>OBRA, SONBHADRA</h3>
+                <ul class="concert-list">
+                    <li>
+                        <div class="concert-event">BHARTIYA SANGEET SHIKSHAN SANSTHAN</div>
+                        <div class="concert-venue"><i class="fa-solid fa-microphone-lines"></i> </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> APRIL, 2017 </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="concert-card">
+                <h3 class="city-name"><i class="fa-solid fa-location-dot"></i>Maharashtra</h3>
+                <ul class="concert-list">
+                    <li>
+                        <div class="concert-event">Ditf Sur Sangam</div>
+                        <div class="concert-venue"><i class="fa-solid fa-microphone-lines"></i>Mumbai</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2024 </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="concert-card">
+                <h3 class="city-name"><i class="fa-solid fa-location-dot"></i>Delhi</h3>
+                <ul class="concert-list">
+                    <li>
+                        <div class="concert-event">BALKAN – JI – BAARI INTERNATIONAL</div>
+                        <div class="concert-venue"><i class="fa-solid fa-microphone-lines"></i>INDRA PURI DELHI</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2004-04 </div>
+                    </li>
+                   <li>
+                        <div class="concert-event">GAANDHI HINDUSTANI SAHITYA SABHA</div>
+                        <div class="concert-venue"><i class="fa-solid fa-microphone-lines"></i> RAJ GHAT, NAYI DELHI</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2016 </div>
+                    </li> 
+                    <li>
+                        <div class="concert-event">MAHAMANA MADAN MOHAN MALVIYA SHATABDI VARSH SAMAROH</div>
+                        <div class="concert-venue"><i class="fa-solid fa-microphone-lines"></i>VIGYAN BHAVAN, NEW DELHI</div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> 2012-13 </div>
+                    </li>
+                </ul>
+            </div>
+             <div class="concert-card">
+                <h3 class="city-name"><i class="fa-solid fa-location-dot"></i>Barely</h3>
+                <ul class="concert-list">
+                    <li>
+                        <div class="concert-event">Ridhima: SRMS Trust</div>
+                        <div class="concert-venue"><i class="fa-solid fa-microphone-lines"></i> </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i>2021</div>
+                    </li>
+                </ul>
+            </div>
+             <div class="concert-card">
+                <h3 class="city-name"><i class="fa-solid fa-location-dot"></i>AYODHYA</h3>
+                <ul class="concert-list">
+                    <li>
+                        <div class="concert-event">RAMOTSAV</div>
+                        <div class="concert-venue"><i class="fa-solid fa-microphone-lines"></i> </div>
+                        <div class="concert-date"><i class="fa-regular fa-calendar"></i> MARCH-2024 </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="Award">
+        <h2 class="section-title">Awards & Recognition</h2>
+        <div class="award-grid">
+            <div class="award-card">
+                <div class="award-img-box">
+                    <img src="assest\Award\JAIN MILAN 2018.avif" alt="AIR Award">
+                </div>
+                <div class="award-info">
+                    <h3>Yuva Sangeet Ratna 2018</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img-box">
+                    <img src="assest\Award\sangeet-saadhak sammaan.avif" alt="Excellence Award">
+                </div>
+                <div class="award-info">
+                    <h3>Sangeet - Saadhak Sammaan 2016</h3>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img-box">
+                    <img src="assest\Award\sangeet sudhaarak Sammaan.avif" alt="Excellence Award">
+                </div>
+                <div class="award-info">
+                    <h3>Sangeet - Sudhaarak Sammaan 2023</h3>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img-box">
+                    <img src="assest\Award\Sangeet Bhramar.avif" alt="Excellence Award">
+                </div>
+                <div class="award-info">
+                    <h3>Sangeet Bhramar 2023</h3>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img-box">
+                    <img src="assest\Award\Bhaarateey Sangeet Shiksha Sansthaan.avif" alt="Excellence Award">
+                </div>
+                <div class="award-info">
+                    <h3>Pandit Ravindra Pandey Sangeet Samman 2017</h3>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img-box">
+                    <img src="assest\Award\Author Of The Week.avif" alt="Excellence Award">
+                </div>
+                <div class="award-info">
+                    <h3>Author Of The Week 2023</h3>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img-box">
+                    <img src="assest\Award\KAUSTUBH SAMMAN - 24-03-2025.avif" alt="Excellence Award">
+                </div>
+                <div class="award-info">
+                    <h3>KAUSTUBH SAMMAN 2025</h3>
+                </div>
+            </div>
+            <div class="award-card">
+                <div class="award-img-box">
+                    <img src="assest\Award\VINOD N. DIXIT AWARD.avif" alt="Excellence Award">
+                </div>
+                <div class="award-info">
+                    <h3>VINOD N. DIXIT AWARD 2011</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="contact-wrap">
+            
+            <p style="margin-top: 15px; font-weight: 700;">
+                <a href="tel:+917505044116" style="color: var(--text-main); text-decoration:none;">
+                    <i class="fa-solid fa-phone fa-phone-footer"></i> +91 75050 44116
+                </a>
+            </p>
+            
+            <div class="social-icons">
+                <a href="https://wa.me/917505044116" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vocalistpankajsharma@gmail.com&su=Inquiry%20Regarding%20Raaga%20Resonance" target="_blank" class="gmail-icon" title="Open Gmail">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="https://www.instagram.com/pankaj90vocalist/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@Vocalistpankaj1790"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.facebook.com/share/186WdeDfET/?mibextid=wwXIfr"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <p style="font-size: 0.7rem; color: #444; margin-top: 30px;">&copy; 2026 Dr. Pankaj Sharma</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
